@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap");
+
+/* variables */
+
+:root {
+  --primary-pale-blue: #e0e8ff;
+  --primary-bright-blue: #3829e0;
+
+  --neutral-very-pale-blue: #f5f7ff;
+  --neutral-desaturated-blue: #7280a7;
+  --neutral-dark-blue: #1f2f56;
+}
+
+/* globals */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url(images/pattern-background-desktop.svg)
+    var(--primary-pale-blue);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--neutral-dark-blue);
+  font-weight: 900;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--neutral-desaturated-blue);
+}
+
+/* styling */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 25%;
+  height: 80%;
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 10%;
+  text-align: center;
+}
+
+.sub-card {
+  width: 100%;
+  margin: 15px auto;
+  display: flex;
+  text-align: unset;
+  justify-content: space-between;
+  background: var(--neutral-very-pale-blue);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sub-card img {
+  width: unset;
+}
+
+.sub-card .left .title {
+  color: var(--neutral-dark-blue);
+  font-weight: 600;
+}
+
+.sub-card .right {
+  display: flex;
+  align-items: center;
+}
+
+.sub-card .right a {
+  color: var(--primary-bright-blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sub-card .right a:hover {
+  opacity: 0.7;
+}
+
+.left {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background: var(--primary-bright-blue);
+  border: none;
+  color: var(--neutral-very-pale-blue);
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 15px 0 20px;
+  box-shadow: 0.1px 0.1px 10px var(--primary-bright-blue);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.cancel a {
+  color: var(--neutral-desaturated-blue);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cancel a:hover {
+  color: var(--neutral-dark-blue);
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background: url(images/pattern-background-mobile.svg)
+      var(--primary-pale-blue);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .card {
+    width: 95%;
+    height: 70%;
+  }
+}
